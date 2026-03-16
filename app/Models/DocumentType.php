@@ -13,4 +13,10 @@ class DocumentType extends Model
     ];
 
     public $timestamp = false;
+
+    // document type has many folder
+    public function folder()
+    {
+        return $this->hasMany(Subject::class, 'type_id');
+    }
 }
