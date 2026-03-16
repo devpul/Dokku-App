@@ -18,6 +18,6 @@ class Subject extends Model
     // subject has one folder
     public function folder()
     {
-        return $this->hasOne(Folder::class, 'folder_id');
+        return $this->hasOne(Folder::class, 'subject_id');
     }
 }
