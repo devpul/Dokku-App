@@ -5,21 +5,24 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+    public function index()
+    {
+        return view('Auth.register');
+    }
     public function register(RegisterRequest $request)
     {
         $validated = $request->validated();
         
-        $user = User::create($validated);
+        User::create([
+            'username'  =>  $validated['username'],
+            'email'     =>  $validated['email'],
+            'password'  =>  Hash::make($validated['password']),
+        ]);
 
-        $token = $user->createToken('auth_token')->plainTextToken;
-
-        return response()->json([
-            'status'    =>  'success',
-            'message'   =>  'Registrasi Berhasil, Silahkan Login',
-            'token'     =>  $token
-        ], 201);
+        return redirect()->back();
     }
 }

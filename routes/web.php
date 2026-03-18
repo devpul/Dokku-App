@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ====================== REGISTER
+Route::get('/', [RegisterController::class, 'index'])->name('register.index');
+Route::post('/register', [RegisterController::class, 'register'])->name('register.store');
