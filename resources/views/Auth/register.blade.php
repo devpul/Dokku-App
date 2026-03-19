@@ -30,7 +30,8 @@
             @error('password') <span style="color: red;">{{ $message }}</span> @enderror
         </div>
 
-        <button>Buat Akun</button>
+        <button class="bg-red-500">Buat Akun</button>
+        <i><a href="{{ route('login') }}" class="bg-blue-500">Sudah punya akun ? Login</a></i>
     </form>
 </body>
 </html>
