@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register | {{ config('app.name') }}</title>
+@extends('layouts.app')
+@section('title', 'Register')
 
-    @vite('resources/css/app.css')
-</head>
-<body>
-    <h1 class="bg-black text-2xl">Register</h1>
+@section('content')
+   <h1 class="bg-black text-2xl">Register</h1>
 
     <form action="{{ route('register.store') }}" method="POST">
         @csrf
@@ -33,5 +26,4 @@
         <button class="bg-red-500">Buat Akun</button>
         <i><a href="{{ route('login') }}" class="bg-blue-500">Sudah punya akun ? Login</a></i>
     </form>
-</body>
-</html>
+@endsection
