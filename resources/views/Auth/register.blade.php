@@ -10,7 +10,7 @@
 
             <h1 class="text-xl font-medium">DOKKU</h1>
         </div>
-        
+
 
         <form action="{{ route('register.store') }}" method="POST"
         class="rounded-xl shadow shadow-gray-300 p-6 w-[90%] md:w-[600px] bg-white">
@@ -18,7 +18,7 @@
 
             <h1 class="text-2xl font-medium mb-2">Get Organized Today</h1>
             <p class="text-sm text-gray-400 mb-6">Create an account to start organizing your files.</p>
-            
+
             <div class="space-y-5">
                 <div>
                     <label class="text-sm" for="username">Username</label><br>
@@ -46,7 +46,7 @@
                         <a href="{{ route('login') }}" class="cursor-pointer hover:text-blue-600 hover:underline">Sign In</a>
                     </p>
                 </div>
-            </div>    
+            </div>
         </form>
 
         <p class="text-sm text-gray-400 mt-5">All your course work, organized.</p>

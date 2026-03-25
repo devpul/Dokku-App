@@ -10,7 +10,7 @@
 
             <h1 class="text-xl font-medium">DOKKU</h1>
         </div>
-        
+
 
         <form action="{{ route('login.store') }}" method="POST"
         class="rounded-xl shadow shadow-gray-300 p-6 w-[90%] md:w-[600px] bg-white">
@@ -18,7 +18,7 @@
 
             <h1 class="text-2xl font-medium mb-2">Welcome Back</h1>
             <p class="text-sm text-gray-400 mb-6">Sign to access your document.</p>
-            
+
             <div class="space-y-5">
                 <div>
                     <label class="text-sm" for="email">Email Address</label><br>
@@ -32,7 +32,6 @@
                     class="w-full shadow rounded-md bg-gray-100 outline-none pl-2 py-1 focus:bg-blue-50 focus:border border-blue-500">
                     @error('password') <span style="color: red;">{{ $message }}</span> @enderror
                 </div>
-
                 <div class="text-center">
                     <button class="bg-blue-500 w-full py-2 px-3 rounded text-white cursor-pointer mb-2">Sign In</button>
                     <p class="text-sm text-gray-500">
@@ -40,7 +39,7 @@
                         <a href="{{ route('register.index') }}" class="cursor-pointer hover:text-blue-600 hover:underline">Sign Up</a>
                     </p>
                 </div>
-            </div>    
+            </div>
         </form>
 
         <p class="text-sm text-gray-400 mt-5">All your course work, organized.</p>

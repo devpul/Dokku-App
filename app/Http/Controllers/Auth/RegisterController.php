@@ -16,13 +16,13 @@ class RegisterController extends Controller
     public function register(RegisterRequest $request)
     {
         $validated = $request->validated();
-        
+
         User::create([
             'username'  =>  $validated['username'],
             'email'     =>  $validated['email'],
             'password'  =>  Hash::make($validated['password']),
         ]);
 
-        return redirect()->back();
+        return redirect()->route('login')->with('success', 'Berhasil Buat Akun');
     }
 }

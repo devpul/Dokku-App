@@ -21,10 +21,10 @@ class LoginController extends Controller
             return redirect()->back()
                 ->with('error', 'Email Atau Password Salah Silahkan Coba Lagi.')
                 ->withInput();
-        } 
-        
+        }
+
         $request->session()->regenerate();
-        
-        return redirect()->back()->with('success','Berhasil Login.');
+
+        return redirect()->route('dashboard.index')->with('success', 'Berhasil Login');
     }
 }
