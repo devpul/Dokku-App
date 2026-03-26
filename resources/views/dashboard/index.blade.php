@@ -31,9 +31,11 @@
                         <a href="" class="hover:text-blue-500 font-semibold hover:transition-all hover:bg-blue-100 rounded-2xl w-full px-5 py-2">
                             Settings
                         </a>
-                        <a href="" class="hover:text-red-500 font-semibold hover:transition-all hover:bg-red-100 rounded-2xl w-full px-5 py-2">
-                            Sign Out
-                        </a>
+                        <form action="{{ route('logout') }}" method="POST"
+                        class="cursor-pointer hover:text-red-500 font-semibold hover:transition-all hover:bg-red-100 rounded-2xl w-full px-5 py-2">
+                            @csrf
+                            <button type="submit">Sign Out</button>
+                        </form>
                     </div>
                 </div>
             </div>
