@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Folder\FolderController;
 use Illuminate\Support\Facades\Route;
 
 // ====================== REGISTER
@@ -24,6 +25,10 @@ Route::middleware(['auth'])->group(function() {
     // ====================== DASHBOARD
     Route::prefix('/')->group(function() {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    });
+
+    Route::prefix('/')->group(function() {
+        Route::get('/folder', [FolderController::class, 'index'])->name('folder.index');
     });
 });
 
