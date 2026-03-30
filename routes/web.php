@@ -13,6 +13,10 @@ Route::prefix('/register')->group(function(){
     Route::post('/store', [RegisterController::class, 'register'])->name('register.store');
 });
 
+Route::get('/upload', function(){
+    return view('components.upload');
+});
+
 // ====================== LOGIN
 Route::prefix('/')->group(function(){
     Route::get('/', [LoginController::class, 'index'])->name('login');
