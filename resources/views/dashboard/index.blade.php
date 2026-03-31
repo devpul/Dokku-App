@@ -1,3 +1,4 @@
+@extends('components.uploadv2')
 @extends('layouts.app')
 @section('title', 'Dashboard')
 
@@ -14,7 +15,7 @@
                             <h1 class="text-3xl font-semibold mb-1">Dashboard</h1>
                             <p class="text-gray-400 font-medium">Your Document overview</p>
                         </div>
-                        <button class="px-5 font-medium py-2 rounded-xl text-white bg-blue-500 cursor-pointer flex gap-x-2 items-center">
+                        <button onclick="openModal()" class="px-5 font-medium py-2 rounded-xl text-white bg-blue-500 cursor-pointer flex gap-x-2 items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
                             </svg>
